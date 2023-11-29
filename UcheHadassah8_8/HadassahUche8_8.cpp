@@ -1,5 +1,5 @@
-/*Write a void function that uses pointers to delete a single character from the end of a C-string. 
-The function takes as parameter the C-string*/
+/*Name:Uche Hadassah
+This program uses pointers to remove the last character at the end of an existing string*/
 #include<iostream>
 #include<cstring>
 using namespace std;
@@ -12,6 +12,12 @@ int main()
 	removeChar(Str);
 	cout << "The new string is:" << Str;
 }
-void removeChar(char*)
+void removeChar(char* str)
 {
+	while (*str != '\0')//While we have not reached the end of the string
+	{
+		str++;//Increment the pointer location
+	}
+	str--;//Move to the location before the null
+	*str = '\0';//Make that character the null
 }
